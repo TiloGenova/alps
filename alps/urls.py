@@ -4,7 +4,7 @@ from alps import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', views.home, name='home'),
 
 
