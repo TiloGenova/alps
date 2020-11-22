@@ -12,8 +12,8 @@ class Activity(models.Model):
         ('cena', 'Cena in quota'),
     )
 
-    title = models.CharField(max_length=150)
     category = models.CharField(max_length=150, null=False, choices=CHOICES)
+    title = models.CharField(max_length=150)
     discription = models.CharField(max_length=350)
     text = models.TextField(blank=True)
     image = models.ImageField(upload_to='portfolio/images/')
@@ -24,16 +24,16 @@ class Activity(models.Model):
 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=150)
-    street = models.CharField(max_length=150)
+    nameAdministrator = models.CharField(max_length=150)
+    streetNumber = models.CharField(max_length=150)
+    city = models.CharField(max_length=150)
     phone = models.CharField(max_length=150)
-    partitaiva = models.CharField(max_length=150)
+    partitaIva = models.CharField(max_length=150)
     email = models.CharField(max_length=150)
-    homepage = models.CharField(max_length=150, blank=True)
 
-
-    emailbluchalet = models.CharField(max_length=150)
-    phonebluchalet = models.CharField(max_length=150)
+    emailBluchalet = models.CharField(max_length=150)
+    phoneBluchalet = models.CharField(max_length=150)
+    homepageBluchalet = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.nameAdministrator

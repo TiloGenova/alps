@@ -1,26 +1,36 @@
 {% extends 'alps/base.html' %}
-
+{% load static %}
 {% block content %}
 
-<!--Berg bild   wechsekn mit -->
 
-<div class="container-sm">
-    <!-- Content here -->
+<!--Berg bild   wechsekn mit   / SLIDER  -->
+{{ contactall.city }}
+{{ contactall.streetNumber }}
+{{ contactall.phone }}
+{{ contactall.partitaIva }}
+{{ contactall.email }}
+{{ contactall.nameAdministrator }}
 
-    <p style="font-size: 16px; line-height: 24px; text-align: left;">Ognuno di noi ha una passione differente, c’è chi ama sciare nella polvere fresca, c’è chi ama andare in Mountain Bike e scendere a tutta birra, chi ama arrampicare su ripide falesie oppure semplicemente fare trekking o pescare trote ad alta quota.</p>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <img src="static/alps/home_alm.jpg">
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="container-sm">
+                <!-- Content here -->
+                <h1 style="font-size: 40px; margin: 0px; text-align: left;">Siamo un gruppo di Property Managers.</h1>
+                <h2>Gestiamo da diversi anni case vacanza in Piemonte e Valle d’Aosta e condividiamo la passione per i posti in cui lavoriamo ancor prima del lavoro stesso!</h2>
+                <p style="font-size: 16px; line-height: 24px; text-align: left;">Ognuno di noi ha una passione differente, c’è chi ama sciare nella polvere fresca, c’è chi ama andare in Mountain Bike e scendere a tutta birra, chi ama arrampicare su ripide falesie oppure semplicemente fare trekking o pescare trote ad alta quota.</p>
+                <p style="font-size: 16px; line-height: 24px; text-align: left;">Al di là delle varie attività sportive praticate, abbiamo tutti una passione in comune: siamo di buona forchetta (e bicchiere!).</p>
+                <p style="font-size: 16px; line-height: 24px; text-align: left;">Quindi abbiamo deciso di contribuire con la nostra esperienza a creare un Blog che avesse la funzione di offrire una guida sulle varie attività da svolgere nei posti in cui abbiamo le nostre strutture e al tempo stesso promuovere le località in cui lavoriamo.
+                <p>ISCRIVITI ALLA NEWSLETTER:
+                    Riceverai mensilmente le nostre offerte delle strutture che gestiamo.</p>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="container-sm">
-    <!-- Content here -->
 
-    <h1>Siamo un gruppo di Property Managers.</h1>
-    <h1 style="font-size: 40px; margin: 0px; text-align: left;">Siamo un gruppo di Property Managers.</h1>
-        <h2>Gestiamo da diversi anni case vacanza in Piemonte e Valle d’Aosta e condividiamo la passione per i posti in cui lavoriamo ancor prima del lavoro stesso!</h2>
-            <p style="font-size: 16px; line-height: 24px; text-align: left;">Ognuno di noi ha una passione differente, c’è chi ama sciare nella polvere fresca, c’è chi ama andare in Mountain Bike e scendere a tutta birra, chi ama arrampicare su ripide falesie oppure semplicemente fare trekking o pescare trote ad alta quota.</p>
-            <p style="font-size: 16px; line-height: 24px; text-align: left;">Al di là delle varie attività sportive praticate, abbiamo tutti una passione in comune: siamo di buona forchetta (e bicchiere!).</p>
-            <p style="font-size: 16px; line-height: 24px; text-align: left;">pQuindi abbiamo deciso di contribuire con la nostra esperienza a creare un Blog che avesse la funzione di offrire una guida sulle varie attività da svolgere nei posti in cui abbiamo le nostre strutture e al tempo stesso promuovere le località in cui lavoriamo.>
-            <p>ISCRIVITI ALLA NEWSLETTER:
-                Riceverai mensilmente le nostre offerte delle strutture che gestiamo.</p>
-</div>
+
 
 {% endblock %}
