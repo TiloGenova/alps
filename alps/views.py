@@ -4,7 +4,8 @@ from .models import Activity, Contact
 # Create your views here.
 def home(request):
     contactall = get_object_or_404(Contact, pk=1)
-    return render(request, 'alps/home.html', {'contactall': contactall})
+    activities = Activity.objects.all()
+    return render(request, 'alps/home.html', {'contactall': contactall, 'activities':activities})
 
 
 def base(request):

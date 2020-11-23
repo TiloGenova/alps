@@ -14,7 +14,7 @@ class Activity(models.Model):
 
     category = models.CharField(max_length=150, null=False, choices=CHOICES)
     title = models.CharField(max_length=150)
-    discription = models.CharField(max_length=350)
+    description = models.CharField(max_length=350)
     text = models.TextField(blank=True)
     image = models.ImageField(upload_to='portfolio/images/')
     url = models.URLField(blank=True)
