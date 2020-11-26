@@ -1,0 +1,41 @@
+{% extends 'alps/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+test
+<br/>
+<br/>
+<br/>
+
+{{ sport_activities }}
+<br/>
+<br/>
+
+
+<div class=" container">
+    <div class="row ">
+        <div class="col-lg-4 col-lg-3">
+        {% for sport_activity in sport_activities %}
+            <img src="{{ sport_activity.image.url }}" class="img-fluid" width="400">
+            <h3>{{ sport_activity.title }}</h3>
+            <p>{{ sport_activity.description }}</p>
+            <br/>
+            <br/>
+            <br/>
+        {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
