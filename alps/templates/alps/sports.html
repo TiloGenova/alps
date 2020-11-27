@@ -1,0 +1,89 @@
+{% extends 'alps/base.html' %}
+{% load static %}
+{% block content %}
+
+<br/>
+
+
+<!--{{ sport_activities }}-->
+
+
+<h3 class="mt-5 text-center" style="font-size: 40px">Attività sportive</h3>
+<h5 class="mt-5 text-center" style="font-size: 22px; color:#d98d76">Dai sfogo alla tua adrenalina, prenota con noi la tua esperienza! </h5>
+<p class="mt-5 text-center" style="font-size: 18px">In questa sessione troverai una selezione di attività adrenaliniche selezionate per
+    voi dai nostri Property Managers più coraggiosi da praticare in tutta la Valle d’Aosta. </p>
+<br/>
+<br/>
+
+
+<div class=" container">
+    <div class="row ">
+        {% for sport_activity in sport_activities %}
+        <div class="col-lg-4 col-md-6" >
+            <div class="shadow-box-example z-depth-1 flex-center">
+
+                    <img src="{{ sport_activity.image.url }}" class="img-fluid" width="400">
+                    <h3>{{ sport_activity.title }}</h3>
+                    <p>{{ sport_activity.description }}</p>
+                    <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                    <br/>
+                    <br/>
+                    <br/>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <div class="container-sm" >
+                <h2 style="font-size: 20px; margin: 0px; text-align: center;" class="mt-5 text-center" >ENOGASTRONOMIA</h2>
+                <hr>
+                <div class=" container">
+                    <div class="row ">
+                        {% for eno in enos %}
+                        <div class="col-md-6">
+                            <img src="{{ eno.image.url }}" class="img-fluid" width="400">
+                            <h3>{{ eno.title }}</h3>
+                            <p>{{ eno.description }}</p>
+                            <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container-sm">
+                <h2 style="font-size: 20px; margin: 0px; text-align: center;" class="mt-5 text-center">LUOGHI D'INTERESSE</h2>
+                <hr>
+                <div class=" container">
+                    <div class="row ">
+                        {% for place in places %}
+                        <div class="col-md-6">
+                            <img src="{{ place.image.url }}" class="img-fluid" width="400">
+                            <h3>{{ place.title }}</h3>
+                            <p>{{ place.description }}</p>
+                            <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
