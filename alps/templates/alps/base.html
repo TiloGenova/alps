@@ -1,7 +1,6 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,10 +16,10 @@
 <body>
 
 
-    <nav id="topNav" class="navbar sticky-top navbar-expand-lg navbar-light bg-light text-center">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <img src="{% static 'alps/logoc.png' %}" width="250 " height="80" class="d-inline-block align-top">
-            <!--alt="I LOVE ALPS"><span>I LOVE ALPS</span></a>-->
+<nav id="topNav" class="navbar sticky-top navbar-expand-lg navbar-light bg-light text-center">
+    <a class="navbar-brand" href="{% url 'alps:home' %}">
+        <img src="{% static 'alps/logoc.png' %}" width="250 " height="80" class="d-inline-block align-top">
+
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,12 +28,12 @@
 
         <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
             <ul class="navbar-nav navbar-right ">
-                <div class="container"
+                <div class="container">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">I love Alps</a>
+                        <a class="nav-link" href="{% url 'alps:home' %}">I love Alps</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'sports' %}">Sport</a>
+                        <a class="nav-link" href="{% url 'alps:sports' %}">Sport</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -48,19 +47,19 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Luoghi d'interesse</a>
+                        <a class="nav-link" href="{% url 'alps:places' %}">Luoghi d'interesse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.bluchalet.it/categoria_immobili/monti/" target="_blank">I nostri appartamenti</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link"  href="#">Contatti</a>
+                        <a class="nav-link"  href="{% url 'alps:contatti' %}">Contatti</a>
                     </li>
-
+                </div>
             </ul>
-
         </div>
-    </nav>
+</nav>
+
 
 {% block content %}
 
@@ -102,3 +101,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+</body>
+</html>

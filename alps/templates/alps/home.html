@@ -113,7 +113,8 @@
 
             <h3>{{ activity.title }}</h3>
             <p>{{ activity.description }}</p>
-            <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+            <!--button href="{% url 'alps:details' activity.id %}" type="button"
+            color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button-->
             <br/>
             <br/>
             <br/>
@@ -132,6 +133,13 @@
 
                 {% for sport_activity in sport_activities %}
                 <div class="col-lg-3 col-md-5">
+                    <!--                <div class="card" style="width: 18rem; ">
+                                        <img src="{{ sport_activity.image.url }}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ sport_activity.title }}</h5>
+                                            <p class="card-text">{{ sport_activity.description }}</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>  -->
 
 
                     <img src="{{ sport_activity.image.url }}" class="img-fluid" width="400">
