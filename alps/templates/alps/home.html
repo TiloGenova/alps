@@ -113,8 +113,9 @@
 
             <h3>{{ activity.title }}</h3>
             <p>{{ activity.description }}</p>
-            <!--button href="{% url 'alps:details' activity.id %}" type="button"
-            color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button-->
+            <!--BUTTON color=#d98d76-->
+            <a href="{% url 'alps:details' activity.id %}" class="btn btn-secondary btn-sm active"
+               role="button" aria-pressed="true">Leggi tutto</a>
             <br/>
             <br/>
             <br/>
