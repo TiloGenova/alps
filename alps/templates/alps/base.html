@@ -21,10 +21,10 @@
 <body>
 
 
-<nav id="topNav" class="navbar sticky-top navbar-expand-lg navbar-light bg-light ">
-    <a class="navbar-brand" href="{% url 'alps:home' %}">
-        <img src="{% static 'alps/logoc.png' %}" width="250 " height="80" class="d-inline-block align-top">
-
+<nav  class="navbar sticky-top navbar-expand-lg navbar-light bg-light ">
+        <a href="{% url 'alps:home' %}">
+        <img src="{% static 'alps/logoc.png' %}" width="250 " height="90"  class="d-inline-block align-top">
+        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
 
 
         <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
-            <ul class="navbar-nav navbar-right ">
+            <ul class="navbar-nav ">
                 <div class="container">
                     <li class="nav-item ">
                         <a class="nav-link" href="{% url 'alps:home' %}">I love Alps</a>
