@@ -26,7 +26,8 @@
                     <img src="{{ place.image.url }}" class="img-fluid" width="400">
                     <h3>{{ place.title }}</h3>
                     <p>{{ place.description }}</p>
-                    <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                    <a href="{% url 'alps:details' place.id %}" class="btn btn-secondary btn-sm active"
+                        role="button" aria-pressed="true">Leggi tutto</a>
                     <br/>
                     <br/>
                     <br/>
@@ -53,7 +54,8 @@
                             <img src="{{ sport_activity.image.url }}" class="img-fluid" width="400">
                             <h3>{{ sport_activity.title }}</h3>
                             <p>{{ sport_activity.description }}</p>
-                            <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                            <a href="{% url 'alps:details' sport_activity.id %}" class="btn btn-secondary btn-sm active"
+                               role="button" aria-pressed="true">Leggi tutto</a>
                         </div>
                         {% endfor %}
                     </div>
@@ -71,7 +73,8 @@
                             <img src="{{ eno.image.url }}" class="img-fluid" width="400">
                             <h3>{{ eno.title }}</h3>
                             <p>{{ eno.description }}</p>
-                            <button href=# type="button" color=#d98d76 class="btn btn-secondary btn-sm">Leggi tutto</button>
+                            <a href="{% url 'alps:details' eno.id %}" class="btn btn-secondary btn-sm active"
+                               role="button" aria-pressed="true">Leggi tutto</a>
                         </div>
                         {% endfor %}
 
