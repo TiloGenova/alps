@@ -47,5 +47,5 @@ def luoghi(request):
 def details(request, activity_id):
     contactall = get_object_or_404(Contact, pk=1)
     activities = Activity.objects.all()
-    activity_id = get_object_or_404(Activity, pk=activity_id)
-    return render(request, 'alps/details.html', {'contactall': contactall, 'id': activity_id})
+    activity = get_object_or_404(Activity, pk=activity_id)
+    return render(request, 'alps/details.html', {'contactall': contactall, 'activity': activity})
