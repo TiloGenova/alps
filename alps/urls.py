@@ -4,6 +4,11 @@ from alps import views
 
 app_name ='alps'
 
+admin.site.site_title = "ILOVEALPS Admin Portal"
+admin.site.site_header = "ILOVEALPS Administration"
+admin.site.index_title = "Welcome to ILOVEALPS Portal"
+
+
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', views.home, name='home'),
