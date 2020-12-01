@@ -25,7 +25,7 @@ padding-left: 30px;
             <br/>
             <h2 class="mt-4" style="font-size: 20px; margin: 0px; text-align: left; color:#d98d76">{{ activity.description }}</h2><br/>
             <p style="font-size: 16px; line-height: 24px; text-align: left;">
-                {{ activity.text }}</p>
+                {{ activity.text|linebreaks }}</p>
             <a style="mt-4; font-size: 16px; line-height: 24px; text-align: left" class="nav-link " href="{{ activity.url }}" target="_blank">{{ activity.url }}</a>
         </div>
         <div class="col-8 col-sm-4">
